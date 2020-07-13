@@ -1,0 +1,101 @@
+{
+  "env": {
+    "es6": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 11,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "react-hooks",
+    "@typescript-eslint",
+    "eslint-plugin-import-helpers"
+  ],
+  "rules": {
+    "arrow-parens": ["error", "as-needed"],
+    "import/extensions": ["error", "ignorePackages", { "ts": "never", "tsx": "never" }],
+    "import/prefer-default-export": "off",
+    "import/no-duplicates": "off",
+    "jsx-a11y/control-has-associated-label": "off",
+    "jsx-a11y/label-has-associated-control": "off",
+    "max-len": ["warn", { "code": 140 }],
+    "no-console": "off",
+    "no-unused-expressions": "off",
+    "object-curly-newline": ["error", {
+      "ObjectExpression": { "multiline": true, "minProperties": 5 },
+      "ObjectPattern": { "multiline": true, "minProperties": 5 },
+      "ImportDeclaration": { "multiline": true, "minProperties": 5 },
+      "ExportDeclaration": { "multiline": true, "minProperties": 5 }
+    }],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/jsx-curly-spacing": [2, {"when": "always", "spacing": { "objectLiterals": "never" }}],
+    "react/jsx-filename-extension": [1, { "extensions": [".tsx"] }],
+    "react/jsx-one-expression-per-line": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/prop-types": "off",
+    "template-curly-spacing": ["error", "always"],
+    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/explicit-function-return-type": ["error", { "allowExpressions": true }],
+    "@typescript-eslint/no-use-before-define": ["error", { "variables": false }],
+
+
+    /**
+      "arrow-body-style": "off",
+      "no-underscore-dangle": ["error", { "allow": ["_id"] }],
+      "no-shadow": "off",
+      "no-param-reassign": "off",
+      "global-require": "off",
+      "import/no-named-as-default": "off",
+      "no-unused-vars": ["error", { "argsIgnorePatter": "^_" }],
+      "consistent-return": "off",
+      "no-useless-return": "off",
+      "no-debugger": "off",
+      "react/state-in-constructor": "off",
+      "no-multiple-empty-lines": ["error", { "max": 1, "maxBOF": 0, "maxEOF": 0 }],
+    */
+
+
+    "import-helpers/order-imports": [
+      "warn",
+      { // example configuration
+          "newlinesBetween": "always",
+          "groups": [
+            "/react/",
+            "/react-native/",
+            "/\b(?!react-icons|react-native-vector-icons)\b^react/",
+            "module",
+            "/^@rocketseat/",
+            "/^styled-components/",
+            "/^date-fns/",
+            "/services/",
+            "/pages/",
+            "/components/",
+            "/styles/",
+            "/^~/",
+            ["parent", "sibling", "index"]
+          ],
+          "alphabetize": { "order": "asc", "ignoreCase": true }
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
+  }
+}
