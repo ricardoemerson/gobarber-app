@@ -84,7 +84,7 @@ const SignUp: React.FC = () => {
             <Title>Crie sua conta</Title>
           </View>
 
-          <Form ref={ formRef } onSubmit={ handleSubmit }>
+          <Form ref={ formRef } onSubmit={ handleSubmit } style={{ width: '100%' }}>
             <Input
               autoCapitalize="words"
               name="name"
@@ -119,6 +119,7 @@ const SignUp: React.FC = () => {
 
             <Button onPress={ () => formRef.current?.submitForm() }>Criar</Button>
           </Form>
+
         </Container>
 
         <BackToSignInButton onPress={ () => navigation.goBack() }>
