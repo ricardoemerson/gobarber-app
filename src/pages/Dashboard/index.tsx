@@ -61,7 +61,7 @@ const Dashboard: React.FC = () => {
         }
         renderItem={ ({ item: provider }) => (
           <ProviderContainer onPress={ () => handleNavigateToCreateAppointment(provider.id) }>
-            <ProviderAvatar source={{ uri: provider.avatar_url }} />
+            <ProviderAvatar source={{ uri: provider.avatar_url || `https://api.adorable.io/avatars/72/${ provider.name }.png` }} />
 
             <ProviderInfo>
               <ProviderName>{ provider.name }</ProviderName>

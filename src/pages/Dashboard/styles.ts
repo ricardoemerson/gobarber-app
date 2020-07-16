@@ -1,5 +1,4 @@
-import { Platform } from 'react-native';
-import { FlatList } from 'react-native';
+import { Platform, FlatList } from 'react-native';
 import { RectButton } from 'react-native-gesture-handler';
 import { getStatusBarHeight } from 'react-native-iphone-x-helper';
 
@@ -46,7 +45,6 @@ export const UserAvatar = styled.Image`
 
 export const ProviderList = styled(FlatList as new () => FlatList<Provider>)`
   padding: 32px 24px 16px;
-
 `;
 
 export const ProviderListTitle = styled.Text`
