@@ -149,3 +149,12 @@ export const HourText = styled.Text<HourTextProps>`
   font-family: 'RobotoSlab-Regular';
   font-size: 16px;
 `;
+
+export const CreateAppointmentButton = styled(OpenDatePickerButton)`
+  height: 50px;
+  margin: 0 24px 24px;
+`;
+
+export const CreateAppointmentButtonText = styled(OpenDatePickerButtonText)`
+  font-size: 18px;
+`;
