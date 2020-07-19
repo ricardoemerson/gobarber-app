@@ -19,7 +19,7 @@ import { Container, Title, BackToSignInButton, BackToSignInText } from './styles
 import logoImg from '../../assets/logo.png';
 import getValidationErrors from '../../utils/getValidationErrors';
 
-interface SignUpFormaData {
+interface SignUpFormData {
   name: string;
   email: string;
   password: string;
@@ -32,7 +32,7 @@ const SignUp: React.FC = () => {
   const emailInputRef = useRef<TextInput>(null);
   const passwordInputRef = useRef<TextInput>(null);
 
-  const handleSubmit = useCallback(async (data: SignUpFormaData) => {
+  const handleSubmit = useCallback(async (data: SignUpFormData) => {
     try {
       formRef.current?.setErrors({});
 
